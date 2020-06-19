@@ -5,6 +5,7 @@ let DoIhaveX2 = false;
 let canibuyx2 = false;
 let canibuyautoc = false;
 let autoc = document.getElementById("autoclicker")
+let multi = 0;
 // window.onload = (event) => {
 //     window.prompt("On refresh it will reset upgrades and cookies", "")
 // }
@@ -15,6 +16,7 @@ function onClickCookies() {
     if (DoIhaveX2 == false) {
         let previous = parseInt(CookieClicker1.innerHTML)
         CookieClicker1.innerHTML = previous + 1;
+        multi = 1;
     }
 }
 
@@ -22,6 +24,7 @@ function onClickCookiesX2() {
     if (DoIhaveX2 == true) {
         let pr = parseInt(CookieClicker1.innerHTML)
         CookieClicker1.innerHTML = pr + 2;
+        multi = 2;
     }
 }
 
@@ -47,3 +50,8 @@ if (DoIhaveX2 == true)
 
 button2.onclick = onUpgradeBuyClick;
 autoc.onclick = onAutoClickerClick;
+if (autoc.click()) {
+    setTimeout(() => {
+        CookieClicker1.innerHTML += multi;
+    }, 10e3);
+}
