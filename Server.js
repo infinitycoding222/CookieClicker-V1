@@ -24,7 +24,7 @@ function onClickCookiesX2() {
     multi = 2;
     CookieClicker1.innerHTML = pr + multi;
     console.log("sadasdsa")
-};
+}
 
 function onUpgradeBuyClick() {
     // DoIhaveX2 = true;
